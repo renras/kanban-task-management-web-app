@@ -12,42 +12,42 @@ $jakarta: "Plus Jakarta Sans", sans-serif;
   font-weight: medium;
 }
 
-.h1 {
+%heading-xl {
   font-family: $jakarta;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
 
-.h2 {
+%heading-l {
   font-family: $jakarta;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
 }
 
-.h3 {
+%heading-m {
   font-family: $jakarta;
   font-weight: bold;
   font-size: 15px;
   line-height: 19px;
 }
 
-.h4 {
+%heading-s {
   font-family: $jakarta;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
 }
 
-.text {
+%body-m {
   font-family: $jakarta;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
 }
 
-.text-lg {
+%body-l {
   font-family: $jakarta;
   font-weight: medium;
   font-size: 13px;

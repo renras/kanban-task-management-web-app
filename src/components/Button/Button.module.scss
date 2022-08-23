@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+%button-shared {
+  padding-inline: 25px;
+  border-radius: 24px;
+  background-color: $purple;
+  color: $white;
+}
+
+.button-lg {
+  padding-block: 15px;
+  @extend %button-shared;
+  @extend %heading-m;
+}
+
+.button-sm {
+  padding-block: 8px;
+  padding-inline: 25px;
+  font-weight: bold;
+  @extend %button-shared;
+  @extend %body-l;
+}
