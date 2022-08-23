@@ -1,23 +1,51 @@
 @use "../../styles/variables" as *;
 @use "../../styles/typography" as *;
 
-%button-shared {
+.button {
   padding-inline: 25px;
   border-radius: 24px;
-  background-color: $purple;
-  color: $white;
+  cursor: pointer;
 }
+
+// size
 
 .button-lg {
   padding-block: 15px;
-  @extend %button-shared;
   @extend %heading-m;
 }
 
 .button-sm {
   padding-block: 8px;
-  padding-inline: 25px;
   font-weight: bold;
-  @extend %button-shared;
   @extend %body-l;
+}
+
+// theme
+
+.button-primary {
+  background-color: $purple;
+  color: $white;
+
+  &:hover {
+    background-color: $purple-lighter;
+  }
+}
+
+.button-secondary {
+  color: $purple;
+  background-color: rgba(99, 95, 199, 10%);
+
+  &:hover {
+    background-color: rgba(99, 95, 199, 25%);
+  }
+}
+
+.button-danger {
+  color: $red;
+  color: $white;
+  background-color: $red;
+
+  &:hover {
+    background-color: $red-lighter;
+  }
 }

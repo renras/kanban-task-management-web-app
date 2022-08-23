@@ -6,13 +6,22 @@ interface Props {
   onClick: MouseEventHandler;
   className?: string;
   size?: "lg" | "sm";
+  theme?: "primary" | "secondary" | "danger";
 }
 
-const Button = ({ children, onClick, className, size = "sm" }: Props) => {
+const Button = ({
+  children,
+  onClick,
+  className,
+  size = "sm",
+  theme = "primary",
+}: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`${styles[`button-${size}`]} ${className}`}
+      className={`${styles.button} ${styles[`button-${size}`]} ${
+        styles[`button-${theme}`]
+      } ${className}`}
     >
       {children}
     </button>
