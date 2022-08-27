@@ -10,12 +10,12 @@
 // size
 
 .button-lg {
-  padding-block: 15px;
+  height: 48px;
   @extend %heading-m;
 }
 
 .button-sm {
-  padding-block: 8px;
+  height: 40px;
   font-weight: bold;
   @extend %body-l;
 }
