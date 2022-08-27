@@ -23,16 +23,16 @@
 // theme
 
 .button-primary {
-  background-color: $purple;
+  background-color: $main-purple;
   color: $white;
 
   &:hover {
-    background-color: $purple-lighter;
+    background-color: $main-purple-hover;
   }
 }
 
 .button-secondary {
-  color: $purple;
+  color: $main-purple;
   background-color: rgba(99, 95, 199, 10%);
 
   &:hover {
@@ -46,6 +46,6 @@
   background-color: $red;
 
   &:hover {
-    background-color: $red-lighter;
+    background-color: $red-hover;
   }
 }
