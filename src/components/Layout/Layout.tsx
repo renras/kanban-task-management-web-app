@@ -21,8 +21,15 @@ const Layout = ({ children }: Props) => {
       </header>
       <main>{children}</main>
       <Modal>
-        <div style={{ backgroundColor: "#fff", padding: "1rem" }}>
-          <Input />
+        <div
+          style={{
+            display: "block",
+            backgroundColor: "#fff",
+            padding: "1rem",
+            width: "20rem",
+          }}
+        >
+          <Input placeholder="Enter task name" />
         </div>
       </Modal>
     </div>
