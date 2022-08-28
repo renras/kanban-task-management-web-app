@@ -1,0 +1,7 @@
+@use "../../../styles/typography";
+@use "../../../styles/variables" as *;
+
+.label {
+  @extend %body-m;
+  color: $medium-grey;
+}
