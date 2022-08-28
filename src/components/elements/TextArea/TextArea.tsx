@@ -8,9 +8,9 @@ interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
 
 const TextArea = ({ className, children }: Props) => {
   return (
-    <TextArea className={`${styles.TextArea} ${className}`}>
+    <textarea className={`${styles.textArea} ${className}`}>
       {children}
-    </TextArea>
+    </textarea>
   );
 };
 
