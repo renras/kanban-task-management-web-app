@@ -1,5 +1,24 @@
 @use "../../styles/variables" as *;
 
+%margin-shared {
+  margin-left: 34px;
+  margin-top: 32px;
+}
+
 .drawer {
   border-right: $border;
+}
+
+.logo {
+  display: block;
+  @extend %margin-shared;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  color: $medium-grey;
+
+  @extend %margin-shared;
 }
