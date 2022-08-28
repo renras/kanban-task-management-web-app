@@ -3,6 +3,7 @@ import styles from "./Layout.module.scss";
 import Button from "../Button/Button";
 import MenuIcon from "../../assets/icon-vertical-ellipsis.svg";
 import Modal from "../Modal/Modal";
+import Input from "../Input/Input";
 
 interface Props {
   children: ReactNode;
@@ -20,7 +21,9 @@ const Layout = ({ children }: Props) => {
       </header>
       <main>{children}</main>
       <Modal>
-        <div style={{ backgroundColor: "#fff", padding: "1rem" }}>modal</div>
+        <div style={{ backgroundColor: "#fff", padding: "1rem" }}>
+          <Input />
+        </div>
       </Modal>
     </div>
   );
