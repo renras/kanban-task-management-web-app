@@ -13,7 +13,7 @@ interface SubTask {
 }
 
 const STATUS_OPTIONS: Option<string>[] = [
-  { value: "todo", label: "To Do" },
+  { value: "todo", label: "Todo" },
   { value: "inprogress", label: "In Progress" },
   { value: "done", label: "Done" },
 ];
@@ -100,6 +100,7 @@ recharge the batteries a little."
       </Label>
       <Select
         id="status"
+        className={styles.dropdown}
         options={STATUS_OPTIONS}
         value={activeStatus}
         onChange={(value) => changeActiveStatus(value as Option<string>)}
