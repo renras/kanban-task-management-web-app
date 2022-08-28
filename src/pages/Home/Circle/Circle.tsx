@@ -6,10 +6,10 @@ interface Props {
 
 const Circle = ({ backgroundColor }: Props) => {
   return (
-    <div
+    <span
       className={styles.circle}
       style={{ backgroundColor: backgroundColor }}
-    ></div>
+    ></span>
   );
 };
 
