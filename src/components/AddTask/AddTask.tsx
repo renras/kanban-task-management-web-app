@@ -44,17 +44,23 @@ const AddTask = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Add New Task</h1>
+
+      {/* title */}
       <Label htmlFor="title" className={styles.label}>
         Title
       </Label>
+
       <Input
         className={styles.textField}
         placeholder="Enter task name"
         id="title"
       />
+
+      {/* description */}
       <Label htmlFor="description" className={styles.label}>
         Description
       </Label>
+
       <TextArea
         id="description"
         className={styles.textField}
@@ -66,6 +72,7 @@ recharge the batteries a little."
       <Label id="subtasks" className={styles.label}>
         Subtasks
       </Label>
+
       {subtasks.map((subtask) => (
         <div key={subtask.id} className={styles.subTask}>
           <Input

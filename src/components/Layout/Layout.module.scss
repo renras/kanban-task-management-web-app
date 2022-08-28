@@ -1,12 +1,27 @@
 @use "../../styles/typography";
 @use "../../styles/variables" as *;
 
+$drawer-width: 300px;
+
+.container {
+  height: 100vh;
+}
+
+.drawer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $drawer-width;
+}
+
 .header {
+  margin-left: $drawer-width;
   border: 1px;
   display: flex;
   align-items: center;
   padding: 20px 24px;
-  border: 0.1px solid $lines-light;
+  border-bottom: 0.1px solid $lines-light;
 }
 
 .heading {
@@ -16,4 +31,8 @@
 
 .menu {
   margin-left: 24px;
+}
+
+.main {
+  margin-left: $drawer-width;
 }
