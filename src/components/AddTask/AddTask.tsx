@@ -3,6 +3,8 @@ import Input from "../elements/Input/Input";
 import styles from "./AddTask.module.scss";
 import Label from "../elements/Label/Label";
 import TextArea from "../elements/TextArea/TextArea";
+import Button from "../elements/Button/Button";
+import CrossIcon from "../../assets/icon-cross.svg";
 
 interface SubTask {
   id: number;
@@ -52,23 +54,32 @@ recharge the batteries a little."
         Subtasks
       </Label>
       {subtasks.map((subtask) => (
-        <div key={subtask.id} className={styles.subtask}>
+        <div key={subtask.id} className={styles.subTask}>
           <Input
-            className={styles.textField}
+            className={styles.subTask__input}
             placeholder="Enter subtask name"
             id={`subtask-${subtask.id}`}
             value={subtask.value}
             onChange={(e) => onSubtaskValueChange(subtask.id, e.target.value)}
           />
           <button
-            className={styles.removeButton}
+            className={styles.subTask__removeButton}
             onClick={() => removeSubtask(subtask.id)}
           >
-            Remove
+            <img src={CrossIcon} alt="remove subtask" />
           </button>
         </div>
       ))}
-      <button onClick={addSubtask}>+ Add New Subtask</button>
+
+      {/* add task button */}
+      <Button
+        onClick={addSubtask}
+        theme="secondary"
+        className={styles.addTaskButton}
+        fluid
+      >
+        + Add New Subtask
+      </Button>
     </div>
   );
 };
