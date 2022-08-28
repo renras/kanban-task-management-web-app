@@ -5,28 +5,41 @@ import Label from "../elements/Label/Label";
 import TextArea from "../elements/TextArea/TextArea";
 import Button from "../elements/Button/Button";
 import CrossIcon from "../../assets/icon-cross.svg";
+import Select, { Option } from "../elements/Select/Select";
 
 interface SubTask {
   id: number;
   value: string;
 }
 
+const STATUS_OPTIONS: Option<string>[] = [
+  { value: "todo", label: "To Do" },
+  { value: "inprogress", label: "In Progress" },
+  { value: "done", label: "Done" },
+];
+
 const AddTask = () => {
   const [subtasks, setSubtasks] = useState<SubTask[]>([]);
+  const [activeStatus, setActiveStatus] = useState(STATUS_OPTIONS[0]);
 
   const addSubtask = () => {
     setSubtasks([...subtasks, { id: subtasks.length, value: "" }]);
   };
+
   const removeSubtask = (id: number) => {
     setSubtasks(subtasks.filter((subtask) => subtask.id !== id));
   };
-  const onSubtaskValueChange = (id: number, value: string) => {
+
+  const changeSubtaskValue = (id: number, value: string) => {
     setSubtasks(
       subtasks.map((subtask) =>
         subtask.id === id ? { ...subtask, value } : subtask
       )
     );
   };
+
+  const changeActiveStatus = (status: Option<string>) =>
+    setActiveStatus(status);
 
   return (
     <div className={styles.container}>
@@ -60,7 +73,7 @@ recharge the batteries a little."
             placeholder="Enter subtask name"
             id={`subtask-${subtask.id}`}
             value={subtask.value}
-            onChange={(e) => onSubtaskValueChange(subtask.id, e.target.value)}
+            onChange={(e) => changeSubtaskValue(subtask.id, e.target.value)}
           />
           <button
             className={styles.subTask__removeButton}
@@ -80,6 +93,17 @@ recharge the batteries a little."
       >
         + Add New Subtask
       </Button>
+
+      {/* status */}
+      <Label htmlFor="status" className={styles.status}>
+        Status
+      </Label>
+      <Select
+        id="status"
+        options={STATUS_OPTIONS}
+        value={activeStatus}
+        onChange={(value) => changeActiveStatus(value as Option<string>)}
+      />
     </div>
   );
 };
