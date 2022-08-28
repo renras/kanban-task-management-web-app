@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import styles from "./Layout.module.scss";
-import Button from "../Button/Button";
+import Button from "../elements/Button/Button";
 import MenuIcon from "../../assets/icon-vertical-ellipsis.svg";
 import Modal from "../Modal/Modal";
-import Input from "../Input/Input";
+import AddTask from "../AddTask/AddTask";
 
 interface Props {
   children: ReactNode;
@@ -21,16 +21,7 @@ const Layout = ({ children }: Props) => {
       </header>
       <main>{children}</main>
       <Modal>
-        <div
-          style={{
-            display: "block",
-            backgroundColor: "#fff",
-            padding: "1rem",
-            width: "20rem",
-          }}
-        >
-          <Input placeholder="Enter task name" />
-        </div>
+        <AddTask />
       </Modal>
     </div>
   );

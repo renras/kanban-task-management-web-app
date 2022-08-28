@@ -1,0 +1,16 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  min-width: 480px;
+  border-radius: 6px;
+  background-color: $white;
+}
+
+.heading {
+  @extend %heading-l;
+}
