@@ -1,18 +1,13 @@
-import { ReactNode } from "react";
+import { ReactNode, LabelHTMLAttributes } from "react";
 import styles from "./Label.module.scss";
 
-interface Props {
+interface Props extends LabelHTMLAttributes<HTMLLabelElement> {
   children: ReactNode;
   className?: string;
-  htmlFor?: string;
 }
 
-const Label = ({ children, className, htmlFor }: Props) => {
-  return (
-    <label htmlFor={htmlFor} className={`${styles.label} ${className}`}>
-      {children}
-    </label>
-  );
+const Label = ({ children, className }: Props) => {
+  return <label className={`${styles.label} ${className}`}>{children}</label>;
 };
 
 export default Label;
