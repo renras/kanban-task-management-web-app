@@ -1,8 +1,6 @@
 @use "../../styles/typography";
 @use "../../styles/variables" as *;
 
-$drawer-width: 300px;
-
 .container {
   height: 100vh;
   display: grid;
@@ -37,4 +35,5 @@ $drawer-width: 300px;
 .main {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
+  background-color: #f4f7fd;
 }
