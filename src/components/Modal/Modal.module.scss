@@ -9,5 +9,21 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: hsl(0, 0, 0, 50%);
+  background: hsla(0, 0%, 0%, 50%);
+}
+
+.content {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 25%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 100%;
+  }
 }
