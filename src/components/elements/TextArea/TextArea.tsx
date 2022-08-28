@@ -6,9 +6,9 @@ interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
 }
 
-const TextArea = ({ className, children }: Props) => {
+const TextArea = ({ className, children, ...textareaProps }: Props) => {
   return (
-    <textarea className={`${styles.textArea} ${className}`}>
+    <textarea className={`${styles.textArea} ${className}`} {...textareaProps}>
       {children}
     </textarea>
   );

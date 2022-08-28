@@ -1,4 +1,5 @@
-import Select, { StylesConfig } from "react-select";
+import Select from "react-select";
+import getCustomStyles from "./customStyles";
 
 import styles from "./Select.module.scss";
 
@@ -22,31 +23,9 @@ const SelectComponent = <T extends string | number | null>({
   value,
   className,
 }: Props<T>) => {
-  const customStyles: StylesConfig<Option<T>> = {
-    singleValue: (provided) => ({
-      ...provided,
-      color: "black",
-      padding: "0",
-    }),
-    control: (provided, state) => ({
-      ...provided,
-      border: "1px solid #e4ebfa",
-      height: "40px",
-      boxShadow: state.isFocused ? "0 0 0 1px #635fc7" : "0",
-      cursor: "pointer",
-      "&:hover": {
-        border: "1px solid #e4ebfa",
-      },
-    }),
-    dropdownIndicator: (provided) => ({
-      ...provided,
-      color: "#635fc7",
-    }),
-  };
-
   return (
     <Select
-      styles={customStyles}
+      styles={getCustomStyles<T>()}
       id={id}
       className={`${styles.select} ${className}`}
       options={options}
