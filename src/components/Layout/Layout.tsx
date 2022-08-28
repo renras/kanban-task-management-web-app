@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import styles from "./Layout.module.scss";
 import Button from "../Button/Button";
 import MenuIcon from "../../assets/icon-vertical-ellipsis.svg";
+import Modal from "../Modal/Modal";
 
 interface Props {
   children: ReactNode;
@@ -18,6 +19,9 @@ const Layout = ({ children }: Props) => {
         </button>
       </header>
       <main>{children}</main>
+      <Modal>
+        <div style={{ backgroundColor: "#fff", padding: "1rem" }}>modal</div>
+      </Modal>
     </div>
   );
 };
