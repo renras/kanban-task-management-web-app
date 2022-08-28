@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.container {
+  padding: 24px;
+  background-color: $medium-grey;
+  height: 100%;
+}
